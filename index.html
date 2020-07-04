@@ -150,6 +150,73 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-浅谈为何要使用无参构造器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/04/%E6%B5%85%E8%B0%88%E4%B8%BA%E4%BD%95%E8%A6%81%E4%BD%BF%E7%94%A8%E6%97%A0%E5%8F%82%E6%9E%84%E9%80%A0%E5%99%A8/">浅谈为何要使用无参构造器</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/04/%E6%B5%85%E8%B0%88%E4%B8%BA%E4%BD%95%E8%A6%81%E4%BD%BF%E7%94%A8%E6%97%A0%E5%8F%82%E6%9E%84%E9%80%A0%E5%99%A8/" class="archive-article-date">
+  	<time datetime="2020-07-04T07:16:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>为何要使用无参构造器? 无参构造器到底有什么用?</p>
+<hr>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">public class Employee &#123;</span><br><span class="line"></span><br><span class="line">   private static int nextId =1;</span><br><span class="line">    private String name;</span><br><span class="line">    private double salary;</span><br><span class="line">    private int id;</span><br><span class="line"></span><br><span class="line">public <span class="function"><span class="title">Employee</span></span>() &#123;  //无参构造器</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">public Employee(String name, double salary) &#123;   //有参构造器</span><br><span class="line">        this.name = name;</span><br><span class="line">        this.salary = salary;</span><br><span class="line">        id=0;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>我们知道，如果在构造器中没有为一些字段设置初始值，那么JAVA会默认给他们一个初始值例如：int类型初始<br>值为0，boolean类型初始值为false，对象引用类型初始值为null。这并不是一个好的编程习惯，因为在某些情况<br>下null值的引用会造成空指针异常，因此JAVA提供了一个无参构造器，这个构造器将所有的字段实例设置为默认值。<br>这便是第一个作用，第二个作用是初始化java类，java没有构造方法是无法new出对象的，因此无参构造提供类的实<br>例化以便调用，ps(自己不写无参构造方法，java会默认提供一个，自己写了则可以理解为覆盖掉了默认提供的构造器)</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/04/%E6%B5%85%E8%B0%88%E4%B8%BA%E4%BD%95%E8%A6%81%E4%BD%BF%E7%94%A8%E6%97%A0%E5%8F%82%E6%9E%84%E9%80%A0%E5%99%A8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-讨论java对对象采用的是按引用调用还是按值调用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

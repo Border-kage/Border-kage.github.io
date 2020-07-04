@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://border-kage.github.io">
-  <title>Archives: 2020/7 | codeborder</title>
+  <title>浅谈为何要使用无参构造器 | codeborder</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="codeborder">
-<meta property="og:url" content="https://border-kage.github.io/archives/2020/07/index.html">
+  <meta name="description" content="问题为何要使用无参构造器? 无参构造器到底有什么用?  示例123456789101112131415161718public class Employee &amp;#123;   private static int nextId &#x3D;1;    private String name;    private double salary;    private int id;public Employe">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浅谈为何要使用无参构造器">
+<meta property="og:url" content="https://border-kage.github.io/2020/07/04/%E6%B5%85%E8%B0%88%E4%B8%BA%E4%BD%95%E8%A6%81%E4%BD%BF%E7%94%A8%E6%97%A0%E5%8F%82%E6%9E%84%E9%80%A0%E5%99%A8/index.html">
 <meta property="og:site_name" content="codeborder">
+<meta property="og:description" content="问题为何要使用无参构造器? 无参构造器到底有什么用?  示例123456789101112131415161718public class Employee &amp;#123;   private static int nextId &#x3D;1;    private String name;    private double salary;    private int id;public Employe">
 <meta property="og:locale" content="CN">
+<meta property="article:published_time" content="2020-07-04T07:16:11.000Z">
+<meta property="article:modified_time" content="2020-07-04T07:32:49.191Z">
 <meta property="article:author" content="Border">
 <meta name="twitter:card" content="summary">
   
@@ -148,184 +152,160 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-浅谈为何要使用无参构造器" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      浅谈为何要使用无参构造器
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/04/%E6%B5%85%E8%B0%88%E4%B8%BA%E4%BD%95%E8%A6%81%E4%BD%BF%E7%94%A8%E6%97%A0%E5%8F%82%E6%9E%84%E9%80%A0%E5%99%A8/" class="archive-article-date">
+
+        
+        <a href="/2020/07/04/%E6%B5%85%E8%B0%88%E4%B8%BA%E4%BD%95%E8%A6%81%E4%BD%BF%E7%94%A8%E6%97%A0%E5%8F%82%E6%9E%84%E9%80%A0%E5%99%A8/" class="archive-article-date">
   	<time datetime="2020-07-04T07:16:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-04</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/04/%E6%B5%85%E8%B0%88%E4%B8%BA%E4%BD%95%E8%A6%81%E4%BD%BF%E7%94%A8%E6%97%A0%E5%8F%82%E6%9E%84%E9%80%A0%E5%99%A8/">浅谈为何要使用无参构造器</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>为何要使用无参构造器? 无参构造器到底有什么用?</p>
+<hr>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">public class Employee &#123;</span><br><span class="line"></span><br><span class="line">   private static int nextId =1;</span><br><span class="line">    private String name;</span><br><span class="line">    private double salary;</span><br><span class="line">    private int id;</span><br><span class="line"></span><br><span class="line">public <span class="function"><span class="title">Employee</span></span>() &#123;  //无参构造器</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">public Employee(String name, double salary) &#123;   //有参构造器</span><br><span class="line">        this.name = name;</span><br><span class="line">        this.salary = salary;</span><br><span class="line">        id=0;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>我们知道，如果在构造器中没有为一些字段设置初始值，那么JAVA会默认给他们一个初始值例如：int类型初始<br>值为0，boolean类型初始值为false，对象引用类型初始值为null。这并不是一个好的编程习惯，因为在某些情况<br>下null值的引用会造成空指针异常，因此JAVA提供了一个无参构造器，这个构造器将所有的字段实例设置为默认值。<br>这便是第一个作用，第二个作用是初始化java类，java没有构造方法是无法new出对象的，因此无参构造提供类的实<br>例化以便调用，ps(自己不写无参构造方法，java会默认提供一个，自己写了则可以理解为覆盖掉了默认提供的构造器)</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://border-kage.github.io/2020/07/04/%E6%B5%85%E8%B0%88%E4%B8%BA%E4%BD%95%E8%A6%81%E4%BD%BF%E7%94%A8%E6%97%A0%E5%8F%82%E6%9E%84%E9%80%A0%E5%99%A8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/04/%E8%AE%A8%E8%AE%BAjava%E5%AF%B9%E5%AF%B9%E8%B1%A1%E9%87%87%E7%94%A8%E7%9A%84%E6%98%AF%E6%8C%89%E5%BC%95%E7%94%A8%E8%B0%83%E7%94%A8%E8%BF%98%E6%98%AF%E6%8C%89%E5%80%BC%E8%B0%83%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2020-07-04T06:51:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-04</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/07/04/%E8%AE%A8%E8%AE%BAjava%E5%AF%B9%E5%AF%B9%E8%B1%A1%E9%87%87%E7%94%A8%E7%9A%84%E6%98%AF%E6%8C%89%E5%BC%95%E7%94%A8%E8%B0%83%E7%94%A8%E8%BF%98%E6%98%AF%E6%8C%89%E5%80%BC%E8%B0%83%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">讨论java对对象采用的是按引用调用还是按值调用</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/04/%E8%AE%A8%E8%AE%BAjava%E5%AF%B9%E5%AF%B9%E8%B1%A1%E9%87%87%E7%94%A8%E7%9A%84%E6%98%AF%E6%8C%89%E5%BC%95%E7%94%A8%E8%B0%83%E7%94%A8%E8%BF%98%E6%98%AF%E6%8C%89%E5%80%BC%E8%B0%83%E7%94%A8/">讨论java对对象采用的是按引用调用还是按值调用</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/04/%E9%9D%99%E6%80%81%E5%AD%97%E6%AE%B5%E4%B8%8E%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2020-07-04T05:33:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/04/%E9%9D%99%E6%80%81%E5%AD%97%E6%AE%B5%E4%B8%8E%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95/">静态字段与静态方法</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/04/%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3git-clone%E9%80%9F%E5%BA%A6%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2020-07-04T04:07:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/04/%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3git-clone%E9%80%9F%E5%BA%A6%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/">如何解决git clone速度慢的问题</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/04/My-First-Blog/" class="archive-article-date">
-  	<time datetime="2020-07-04T02:27:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/04/My-First-Blog/">My First Blog</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/04/hello-world/" class="archive-article-date">
-  	<time datetime="2020-07-04T02:12:55.626Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/04/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -348,8 +328,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

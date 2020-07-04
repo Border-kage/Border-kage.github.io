@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="https://border-kage.github.io">
   <title>静态字段与静态方法 | codeborder</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="静态字段将一个字段名用static修饰即为静态字段，实例字段的特点是每个实例字段都对应一个对象而静态字段只属于类 12345678class Employee&amp;#123;    private int number;   &#x2F;&#x2F;实例字段    private static int nextId;   &#x2F;&#x2F;静态字段   Employee.nextId       &#x2F;&#x2F;访问静态字段   System.o">
+  <meta name="description" content="静态字段将一个字段名用static修饰即为静态字段，实例字段的特点是每个实例字段都对应一个对象而静态字段只属于类 1234567class Employee&amp;#123;    private int number;   &#x2F;&#x2F;实例字段    private static int nextId;   &#x2F;&#x2F;静态字段        Employee.nextId       &#x2F;&#x2F;访问静态字段    Sys">
 <meta property="og:type" content="article">
 <meta property="og:title" content="静态字段与静态方法">
 <meta property="og:url" content="https://border-kage.github.io/2020/07/04/%E9%9D%99%E6%80%81%E5%AD%97%E6%AE%B5%E4%B8%8E%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="codeborder">
-<meta property="og:description" content="静态字段将一个字段名用static修饰即为静态字段，实例字段的特点是每个实例字段都对应一个对象而静态字段只属于类 12345678class Employee&amp;#123;    private int number;   &#x2F;&#x2F;实例字段    private static int nextId;   &#x2F;&#x2F;静态字段   Employee.nextId       &#x2F;&#x2F;访问静态字段   System.o">
+<meta property="og:description" content="静态字段将一个字段名用static修饰即为静态字段，实例字段的特点是每个实例字段都对应一个对象而静态字段只属于类 1234567class Employee&amp;#123;    private int number;   &#x2F;&#x2F;实例字段    private static int nextId;   &#x2F;&#x2F;静态字段        Employee.nextId       &#x2F;&#x2F;访问静态字段    Sys">
 <meta property="og:locale" content="CN">
 <meta property="article:published_time" content="2020-07-04T05:33:43.000Z">
-<meta property="article:modified_time" content="2020-07-04T06:06:56.189Z">
+<meta property="article:modified_time" content="2020-07-04T06:27:02.738Z">
 <meta property="article:author" content="Border">
 <meta name="twitter:card" content="summary">
   
@@ -173,7 +173,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="静态字段"><a href="#静态字段" class="headerlink" title="静态字段"></a>静态字段</h2><p>将一个字段名用static修饰即为静态字段，实例字段的特点是每个实例字段都对应一个对象<br>而静态字段只属于类</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class Employee&#123;</span><br><span class="line">    private int number;   //实例字段</span><br><span class="line">    private static int nextId;   //静态字段</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">   Employee.nextId       //访问静态字段</span><br><span class="line">   System.out.println(Employee.nextId); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class Employee&#123;</span><br><span class="line">    private int number;   //实例字段</span><br><span class="line">    private static int nextId;   //静态字段</span><br><span class="line">    </span><br><span class="line">    Employee.nextId       //访问静态字段</span><br><span class="line">    System.out.println(Employee.nextId); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
 <h2 id="静态方法"><a href="#静态方法" class="headerlink" title="静态方法"></a>静态方法</h2><p>用staitc修饰的方法名为静态方法，它属于类，换言之就是静态方法没有隐式参数，直接用类名.方法名即可调用</p>
 <pre><code class="bash">public static void <span class="function"><span class="title">setID</span></span>(){

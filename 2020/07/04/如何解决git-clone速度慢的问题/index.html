@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="https://border-kage.github.io">
   <title>如何解决git clone速度慢的问题 | codeborder</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##问题描述 近期github clone一些项目时速度极慢，完全接受不了，这里有一个解决方法  ##解决方法使用国内镜像源，已知的国内镜像网站有 github.com.cnpmjs.org和git.sdut.me&#x2F; 速度根据各人而定在clone时替换为镜像源即可。  ##示例 12345&#x2F;&#x2F;这是要clone的git clone https:&#x2F;&#x2F;github.com&#x2F;Hackergeek&#x2F;arch">
+  <meta name="description" content="问题描述近期github clone一些项目时速度特别慢，这里有一个解决方法  解决方法使用国内镜像源，例如github.com.cnpmjs.org和git.sdut.me&#x2F;等在clone时替换为镜像源即可。  示例12345&#x2F;&#x2F;这是要clone的git clone https:&#x2F;&#x2F;github.com&#x2F;Border-kage&#x2F;R1.jpg&#x2F;&#x2F;替换镜像源git clone https:&#x2F;&#x2F;git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何解决git clone速度慢的问题">
 <meta property="og:url" content="https://border-kage.github.io/2020/07/04/%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3git-clone%E9%80%9F%E5%BA%A6%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="codeborder">
-<meta property="og:description" content="##问题描述 近期github clone一些项目时速度极慢，完全接受不了，这里有一个解决方法  ##解决方法使用国内镜像源，已知的国内镜像网站有 github.com.cnpmjs.org和git.sdut.me&#x2F; 速度根据各人而定在clone时替换为镜像源即可。  ##示例 12345&#x2F;&#x2F;这是要clone的git clone https:&#x2F;&#x2F;github.com&#x2F;Hackergeek&#x2F;arch">
+<meta property="og:description" content="问题描述近期github clone一些项目时速度特别慢，这里有一个解决方法  解决方法使用国内镜像源，例如github.com.cnpmjs.org和git.sdut.me&#x2F;等在clone时替换为镜像源即可。  示例12345&#x2F;&#x2F;这是要clone的git clone https:&#x2F;&#x2F;github.com&#x2F;Border-kage&#x2F;R1.jpg&#x2F;&#x2F;替换镜像源git clone https:&#x2F;&#x2F;git">
 <meta property="og:locale" content="CN">
 <meta property="article:published_time" content="2020-07-04T04:07:23.000Z">
-<meta property="article:modified_time" content="2020-07-04T04:12:28.831Z">
+<meta property="article:modified_time" content="2020-07-04T04:19:52.646Z">
 <meta property="article:author" content="Border">
 <meta name="twitter:card" content="summary">
   
@@ -178,13 +178,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##问题描述</p>
-<p>近期github clone一些项目时速度极慢，完全接受不了，这里有一个解决方法</p>
+        <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>近期github clone一些项目时速度特别慢，这里有一个解决方法</p>
 <hr>
-<p>##解决方法<br>使用国内镜像源，已知的国内镜像网站有 github.com.cnpmjs.org和git.sdut.me/ 速度根据各人而定<br>在clone时替换为镜像源即可。</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>使用国内镜像源，例如github.com.cnpmjs.org和git.sdut.me/等<br>在clone时替换为镜像源即可。</p>
 <hr>
-<p>##示例</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//这是要<span class="built_in">clone</span>的</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/Hackergeek/architecture-samples</span><br><span class="line"></span><br><span class="line">//替换镜像源</span><br><span class="line">git <span class="built_in">clone</span> https://github.com.cnpmjs.org/Hackergeek/architecture-samples</span><br></pre></td></tr></table></figure>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//这是要<span class="built_in">clone</span>的</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/Border-kage/R1.jpg</span><br><span class="line"></span><br><span class="line">//替换镜像源</span><br><span class="line">git <span class="built_in">clone</span> https://github.com.cnpmjs.org/Border-kage/R1.jpg</span><br></pre></td></tr></table></figure>
       
 
       

@@ -146,6 +146,80 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Lambda表达式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/09/Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/">Lambda表达式</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/09/Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="archive-article-date">
+  	<time datetime="2020-07-09T09:48:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Lambda表达式"><a href="#Lambda表达式" class="headerlink" title="Lambda表达式"></a>Lambda表达式</h2><p>lambda表达式，也可称为闭包，它是java8发布的重要的特性<br>lambda表达式允许把函数作为一个方法的参数传递进去<br>使用lambda表达式可以使代码变得更简洁，紧凑</p>
+<p>以下是lambda表达式的重要特征:</p>
+<p>可选类型声明：不需要声明参数类型，编译器可以统一识别参数值。<br>可选的参数圆括号：一个参数无需定义圆括号，但多个参数需要定义圆括号。<br>可选的大括号：如果主体包含了一个语句，就不需要使用大括号。<br>可选的返回关键字：如果主体只有一个表达式返回值则编译器会自动返回值，大括号需要指定明表达式返回了一个数值。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">//lambda表达式的语法格式：</span><br><span class="line"></span><br><span class="line">(parameters) -&gt; expression</span><br><span class="line">//或</span><br><span class="line">(parameters) -&gt;&#123; statements; &#125;</span><br><span class="line"></span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"><span class="comment">## Lambda表达式实例</span></span><br><span class="line"></span><br><span class="line">不使用lambda表达式</span><br><span class="line"></span><br><span class="line">``` bash</span><br><span class="line">public class MyComparator implements Comparator&lt;String&gt; &#123;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public int compare(String One, String Two) &#123;</span><br><span class="line">        <span class="built_in">return</span> One.length()-Two.length();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">public class Comparatortest &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        String[] s = &#123;<span class="string">"s"</span>,<span class="string">"sss"</span>,<span class="string">"ss"</span>,<span class="string">"ssss"</span>&#125;;</span><br><span class="line">        Arrays.sort(s,new MyComparator());</span><br><span class="line">        //输出</span><br><span class="line">        System.out.println(Arrays.toString(s));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>使用lambda表达式,可以将MyComparator的代码块直接扔进sort在中</p>
+<p>}``` bash<br>public class Comparatortest{</p>
+<pre><code>public static void main(String[] args) {
+    String[] s = {&quot;s&quot;,&quot;sss&quot;,&quot;ss&quot;,&quot;ssss&quot;};
+    Arrays.sort(s,(one,two)-&gt;one.length()-two.length());
+    //输出
+    System.out.println(Arrays.toString(s));
+}</code></pre><p>}</p>
+<pre><code></code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/09/Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-抽象类与接口的概念" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -176,7 +250,8 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">public class InterfaceInheritimpl implements MyinterfaceA,MyinterfaceB &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void <span class="function"><span class="title">methodA</span></span>() &#123;</span><br><span class="line">        System.out.println(<span class="string">"覆写了A方法"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void <span class="function"><span class="title">methodB</span></span>() &#123;</span><br><span class="line">        System.out.println(<span class="string">"覆写了B方法"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void <span class="function"><span class="title">abs</span></span>()&#123;</span><br><span class="line">        System.out.println(<span class="string">"覆写了共有方法"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">public interface MyinterfaceA &#123;</span><br><span class="line"></span><br><span class="line">    public abstract void methodA();</span><br><span class="line"></span><br><span class="line">    public abstract void abs();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public interface MyinterfaceB &#123;</span><br><span class="line"></span><br><span class="line">    public abstract void methodB();</span><br><span class="line"></span><br><span class="line">    public abstract void abs();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <hr>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>接口与类相似点：<br>一个接口可以有多个方法。<br>接口文件保存在 .java 结尾的文件中，文件名使用接口名。<br>接口的字节码文件保存在 .class 结尾的文件中。<br>接口相应的字节码文件必须在与包名称相匹配的目录结构中。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>接口与类相似点：</p>
+<p>一个接口可以有多个方法。<br>接口文件保存在 .java 结尾的文件中，文件名使用接口名。<br>接口的字节码文件保存在 .class 结尾的文件中。<br>接口相应的字节码文件必须在与包名称相匹配的目录结构中。</p>
 <p>抽象类和接口的区别：</p>
 <ol>
 <li>抽象类中的方法可以有方法体，就是能实现方法的具体功能，但是接口中的方法不行。</li>

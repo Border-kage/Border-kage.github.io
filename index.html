@@ -146,6 +146,79 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Collection集合" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/10/Collection%E9%9B%86%E5%90%88/">Collection</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/10/Collection%E9%9B%86%E5%90%88/" class="archive-article-date">
+  	<time datetime="2020-07-10T11:19:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="什么是集合，集合和数组有什么区别"><a href="#什么是集合，集合和数组有什么区别" class="headerlink" title="什么是集合，集合和数组有什么区别"></a>什么是集合，集合和数组有什么区别</h2><p>集合是java中的一种容器，可用来存储多种数据<br>1 数组的长度是固定的，集合的长度是可变的<br>2 数组只能存储同一种类型，集合存储的都是对象，且对象类型可以不一致</p>
+<hr>
+<h2 id="集合框架"><a href="#集合框架" class="headerlink" title="集合框架"></a>集合框架</h2><p>集合按照存储结构可以分为两大类，分别是单列集合 java.util.Collection和双列集合java.util.map<br>本文主要学习Collection单列集合，学习集合的目标<br>1：会使用集合存储数据<br>2：会遍历集合(即拿到数据)<br>3：掌握每一种集合的特性</p>
+<p>Collection集合如图所示<br><img src="/2020/07/10/Collection%E9%9B%86%E5%90%88/R1.png" alt></p>
+<hr>
+<h2 id="List接口和Set接口"><a href="#List接口和Set接口" class="headerlink" title="List接口和Set接口"></a>List接口和Set接口</h2><p>List接口的特点如下<br>1.有序的集合(存储和取出元素相同)<br>2.允许存储重复的元素<br>3.有索引，可以使用for循环遍历</p>
+<p>Set接口特点如下<br>1.无序(存储和取出的元素有可能不一致)<br>2.不允许存储重复元素<br>3.没有索引，不可以使用for循环遍历</p>
+<p>注:Collection接口是所有单列集合都可使用的共性方法(类似于父类)，但它没有带索引的方法</p>
+<hr>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">//Collection接口中所有集合共性的方法</span><br><span class="line"></span><br><span class="line">public boolean add(E e) 把给定对象添加到数组</span><br><span class="line"></span><br><span class="line">public void clear()  清空所有元素</span><br><span class="line"></span><br><span class="line">public boolean remove(E e) 删除给定对象</span><br><span class="line"></span><br><span class="line">public boolean cotains(E e) 判断当前集合里是否有给定对象</span><br><span class="line"></span><br><span class="line">public boolean isEmpty() 判断集合是否为空</span><br><span class="line"></span><br><span class="line">public int size() 返回集合中元素的个数</span><br><span class="line"></span><br><span class="line">public Obect[] toArray() 把集合中的元素存储到数组中</span><br></pre></td></tr></table></figure>
+
+<h2 id="未完"><a href="#未完" class="headerlink" title="未完~"></a>未完~</h2>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/10/Collection%E9%9B%86%E5%90%88/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Lambda表达式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -782,81 +855,10 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/04/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/04/hello-world/" class="archive-article-date">
-  	<time datetime="2020-07-04T02:12:55.626Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/04/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+    </nav>
   
 
 

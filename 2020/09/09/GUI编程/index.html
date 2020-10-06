@@ -6,15 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://border-kage.github.io">
-  <title>Archives | CodeBorder</title>
+  <title>GUI编程 | CodeBorder</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="CodeBorder">
-<meta property="og:url" content="https://border-kage.github.io/archives/index.html">
+  <meta name="description" content="GUI编程1.AWT(底层)1.1 AWT介绍中文译为抽象窗口工具包，该包提供了一套与本地图形界面进行交互的接口，是Java提供的用来建立和设置Java的图形用户界面的基本工具。 1.2 组件和容器1、Frame123456789101112131415161718192021public class FrameTest &amp;#123;    public static void main(Stri">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GUI编程">
+<meta property="og:url" content="https://border-kage.github.io/2020/09/09/GUI%E7%BC%96%E7%A8%8B/index.html">
 <meta property="og:site_name" content="CodeBorder">
+<meta property="og:description" content="GUI编程1.AWT(底层)1.1 AWT介绍中文译为抽象窗口工具包，该包提供了一套与本地图形界面进行交互的接口，是Java提供的用来建立和设置Java的图形用户界面的基本工具。 1.2 组件和容器1、Frame123456789101112131415161718192021public class FrameTest &amp;#123;    public static void main(Stri">
 <meta property="og:locale" content="CN">
+<meta property="og:image" content="https://border-kage.github.io/2020/09/09/GUI%E7%BC%96%E7%A8%8B/C:%5CUsers%5C21134%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200909222420496.png">
+<meta property="og:image" content="https://border-kage.github.io/2020/09/09/GUI%E7%BC%96%E7%A8%8B/C:%5CUsers%5C21134%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200909222942664.png">
+<meta property="og:image" content="https://border-kage.github.io/2020/09/09/images/GUI%E7%BC%96%E7%A8%8B/image-20200910172950349.png">
+<meta property="article:published_time" content="2020-09-09T14:54:03.111Z">
+<meta property="article:modified_time" content="2020-09-29T14:04:01.236Z">
 <meta property="article:author" content="Border">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://border-kage.github.io/2020/09/09/GUI%E7%BC%96%E7%A8%8B/C:%5CUsers%5C21134%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200909222420496.png">
   
     <link rel="alternative" href="/atom.xml" title="CodeBorder" type="application/atom+xml">
   
@@ -144,295 +152,241 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-GUI编程" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      GUI编程
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/09/GUI%E7%BC%96%E7%A8%8B/" class="archive-article-date">
+
+        
+        <a href="/2020/09/09/GUI%E7%BC%96%E7%A8%8B/" class="archive-article-date">
   	<time datetime="2020-09-09T14:54:03.111Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-09</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/09/GUI%E7%BC%96%E7%A8%8B/">GUI编程</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="GUI编程"><a href="#GUI编程" class="headerlink" title="GUI编程"></a>GUI编程</h1><h2 id="1-AWT-底层"><a href="#1-AWT-底层" class="headerlink" title="1.AWT(底层)"></a>1.AWT(底层)</h2><h3 id="1-1-AWT介绍"><a href="#1-1-AWT介绍" class="headerlink" title="1.1 AWT介绍"></a>1.1 AWT介绍</h3><p>中文译为抽象窗口工具包，该包提供了一套与本地图形界面进行交互的接口，是Java提供的用来建立和设置Java的图形用户界面的基本工具。</p>
+<h3 id="1-2-组件和容器"><a href="#1-2-组件和容器" class="headerlink" title="1.2 组件和容器"></a>1.2 组件和容器</h3><h4 id="1、Frame"><a href="#1、Frame" class="headerlink" title="1、Frame"></a>1、Frame</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FrameTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Frame frame = <span class="keyword">new</span> Frame(<span class="string">"我的第一个java图形界面窗口"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//默认不可见 需要设置可见性</span></span><br><span class="line">        frame.setVisible(<span class="keyword">true</span>);</span><br><span class="line">        <span class="comment">//设置窗口大小</span></span><br><span class="line">        frame.setSize(<span class="number">400</span>,<span class="number">400</span>);</span><br><span class="line">        <span class="comment">//设置背景颜色</span></span><br><span class="line"><span class="comment">//        frame.setBackground(Color.LIGHT_GRAY);</span></span><br><span class="line">        frame.setBackground(<span class="keyword">new</span> Color(<span class="number">145</span>, <span class="number">255</span>, <span class="number">71</span>));</span><br><span class="line"></span><br><span class="line">        <span class="comment">//设置弹出位置  0,0点在左上角</span></span><br><span class="line">        frame.setLocation(<span class="number">200</span>,<span class="number">200</span>);</span><br><span class="line">        <span class="comment">//设置大小固定</span></span><br><span class="line">        frame.setResizable(<span class="keyword">false</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//到此为止窗口关不掉</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+<p><img src="/2020/09/09/GUI%E7%BC%96%E7%A8%8B/C:%5CUsers%5C21134%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200909222420496.png" alt="image-20200909222420496"></p>
+<p>封装以后的代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FrameTest2</span> </span>&#123;</span><br><span class="line">    <span class="comment">//展示多个窗口</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        MyFrame myFrame1 = <span class="keyword">new</span> MyFrame(<span class="number">100</span>, <span class="number">100</span>, <span class="number">200</span>, <span class="number">200</span>, Color.black);</span><br><span class="line">        MyFrame myFrame2 = <span class="keyword">new</span> MyFrame(<span class="number">200</span>, <span class="number">200</span>, <span class="number">400</span>, <span class="number">400</span>, Color.blue);</span><br><span class="line">        MyFrame myFrame3 = <span class="keyword">new</span> MyFrame(<span class="number">300</span>, <span class="number">300</span>, <span class="number">600</span>, <span class="number">600</span>, Color.gray);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyFrame</span> <span class="keyword">extends</span> <span class="title">Frame</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> num =<span class="number">0</span>; <span class="comment">//可能存在多个窗口 需要一个计数器</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyFrame</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y,<span class="keyword">int</span> width, <span class="keyword">int</span> high,Color color)</span></span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(<span class="string">"Myframe+"</span>+(++num));</span><br><span class="line">        setBackground(color);</span><br><span class="line">        <span class="comment">//setBounds方法包含setSize,setLocation</span></span><br><span class="line">        setBounds(x,y,width,high);</span><br><span class="line">        <span class="comment">//可视</span></span><br><span class="line">        setVisible(<span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p><img src="/2020/09/09/GUI%E7%BC%96%E7%A8%8B/C:%5CUsers%5C21134%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200909222942664.png" alt="image-20200909222942664"></p>
+<h4 id="2、Panel"><a href="#2、Panel" class="headerlink" title="2、Panel"></a>2、Panel</h4><p>解决了关闭窗口的问题。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PanelTest</span> </span>&#123;</span><br><span class="line"><span class="comment">//    panel可以看做是一个空间 但它不可单独存在</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Frame frame = <span class="keyword">new</span> Frame();</span><br><span class="line">        <span class="comment">//布局的概念</span></span><br><span class="line">        Panel panel = <span class="keyword">new</span> Panel();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//设置窗口布局</span></span><br><span class="line">        frame.setLayout(<span class="keyword">null</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//坐标</span></span><br><span class="line">        frame.setBounds(<span class="number">300</span>,<span class="number">300</span>,<span class="number">500</span>,<span class="number">500</span>);</span><br><span class="line">        frame.setBackground(Color.LIGHT_GRAY);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//panel 设置坐标，相对于frame</span></span><br><span class="line">        panel.setBounds(<span class="number">50</span>,<span class="number">50</span>,<span class="number">400</span>,<span class="number">400</span>);</span><br><span class="line">        panel.setBackground(<span class="keyword">new</span> Color(<span class="number">201</span>,<span class="number">255</span>, <span class="number">70</span>));</span><br><span class="line"></span><br><span class="line">        <span class="comment">//frame.add(panel)</span></span><br><span class="line">        frame.add(panel);</span><br><span class="line">        frame.setVisible(<span class="keyword">true</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//监听事件，监听窗口关闭事件</span></span><br><span class="line">        <span class="comment">//适配器模式:</span></span><br><span class="line">        frame.addWindowListener(<span class="keyword">new</span> WindowAdapter() &#123;</span><br><span class="line">            <span class="comment">//窗口点击关闭的时候需要做的事情</span></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">windowClosing</span><span class="params">(WindowEvent e)</span> </span>&#123;</span><br><span class="line">                <span class="comment">//结束程序</span></span><br><span class="line">                System.exit(<span class="number">0</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="../images/GUI%E7%BC%96%E7%A8%8B/image-20200910172950349.png" alt="image-20200910172950349"></p>
+<h4 id="3、布局管理器"><a href="#3、布局管理器" class="headerlink" title="3、布局管理器"></a>3、布局管理器</h4><ul>
+<li>流式布局</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FlowLayoutTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Frame frame = <span class="keyword">new</span> Frame();</span><br><span class="line">        Button button1 = <span class="keyword">new</span> Button(<span class="string">"button1"</span>);</span><br><span class="line">        Button button2 = <span class="keyword">new</span> Button(<span class="string">"button2"</span>);</span><br><span class="line">        Button button3 = <span class="keyword">new</span> Button(<span class="string">"button3"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//设置流式布局</span></span><br><span class="line">        frame.setLayout(<span class="keyword">new</span> FlowLayout(FlowLayout.RIGHT));</span><br><span class="line"></span><br><span class="line">        <span class="comment">//添加按钮</span></span><br><span class="line">        frame.add(button1);</span><br><span class="line">        frame.add(button2);</span><br><span class="line">        frame.add(button3);</span><br><span class="line">        frame.setSize(<span class="number">200</span>,<span class="number">200</span>);</span><br><span class="line">        frame.setVisible(<span class="keyword">true</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>东西南北中</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BorderTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Frame frame = <span class="keyword">new</span> Frame(<span class="string">"My Frame"</span>);</span><br><span class="line"></span><br><span class="line">        Button west = <span class="keyword">new</span> Button(<span class="string">"west"</span>);</span><br><span class="line">        Button east = <span class="keyword">new</span> Button(<span class="string">"east"</span>);</span><br><span class="line">        Button south = <span class="keyword">new</span> Button(<span class="string">"south"</span>);</span><br><span class="line">        Button north = <span class="keyword">new</span> Button(<span class="string">"north"</span>);</span><br><span class="line">        Button center =  <span class="keyword">new</span> Button(<span class="string">"center"</span>);</span><br><span class="line"></span><br><span class="line">        frame.add(east,BorderLayout.EAST);</span><br><span class="line">        frame.add(west,BorderLayout.WEST);</span><br><span class="line">        frame.add(south,BorderLayout.SOUTH);</span><br><span class="line">        frame.add(north,BorderLayout.NORTH);</span><br><span class="line">        frame.add(center,BorderLayout.CENTER);</span><br><span class="line"></span><br><span class="line">        frame.setSize(<span class="number">200</span>,<span class="number">200</span>);</span><br><span class="line">        frame.setVisible(<span class="keyword">true</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>表格</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GridLayoutTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        Frame frame = <span class="keyword">new</span> Frame(<span class="string">"My Frame"</span>);</span><br><span class="line"></span><br><span class="line">        Button b1 = <span class="keyword">new</span> Button(<span class="string">"b1"</span>);</span><br><span class="line">        Button b2 = <span class="keyword">new</span> Button(<span class="string">"b2"</span>);</span><br><span class="line">        Button b3 = <span class="keyword">new</span> Button(<span class="string">"b3"</span>);</span><br><span class="line">        Button b4 = <span class="keyword">new</span> Button(<span class="string">"b4"</span>);</span><br><span class="line">        Button b5 = <span class="keyword">new</span> Button(<span class="string">"b5"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//      三行两列</span></span><br><span class="line">        frame.setLayout(<span class="keyword">new</span> GridLayout(<span class="number">3</span>,<span class="number">2</span>));</span><br><span class="line">        frame.add(b1);</span><br><span class="line">        frame.add(b2);</span><br><span class="line">        frame.add(b3);</span><br><span class="line">        frame.add(b4);</span><br><span class="line">        frame.add(b5);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//java函数 自动布局</span></span><br><span class="line">        frame.pack();</span><br><span class="line">        frame.setVisible(<span class="keyword">true</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>总结：</p>
+<p>1、Frame是一个顶层框架</p>
+<p>2、panel是面板，无法单独显示，需要添加到某个容器中</p>
+<p>3、布局管理器</p>
+<p>4、大小，定位，北京颜色，可见性，监听。</p>
+<h4 id="4、事件监听"><a href="#4、事件监听" class="headerlink" title="4、事件监听"></a>4、事件监听</h4><p>事件监听：当某个事情发生的时候，就相应的做什么。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestActionEvent</span> </span>&#123;</span><br><span class="line">   <span class="comment">// 按下按钮的时候 触发一些事件</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Frame frame = <span class="keyword">new</span> Frame();</span><br><span class="line">        Button button = <span class="keyword">new</span> Button();</span><br><span class="line"></span><br><span class="line">        MyActionListener MA = <span class="keyword">new</span> MyActionListener();</span><br><span class="line">        button.addActionListener(MA);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        frame.add(button,BorderLayout.CENTER);</span><br><span class="line">        frame.pack();</span><br><span class="line">        frame.setVisible(<span class="keyword">true</span>);</span><br><span class="line">        WindowClose(frame);  <span class="comment">//关闭窗口</span></span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//关闭窗口</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">WindowClose</span><span class="params">(Frame frame)</span></span>&#123;</span><br><span class="line">    frame.addWindowListener(<span class="keyword">new</span> WindowAdapter() &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">windowClosing</span><span class="params">(WindowEvent e)</span> </span>&#123;</span><br><span class="line">            System.exit(<span class="number">0</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line">    <span class="comment">//事件监听</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyActionListener</span> <span class="keyword">implements</span> <span class="title">ActionListener</span></span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">actionPerformed</span><span class="params">(ActionEvent e)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"实现了一个动作"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>实现多个按钮 共享同一个事件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestActionEventtwo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//两个按钮 实现同一个监听</span></span><br><span class="line">        Frame frame = <span class="keyword">new</span> Frame();</span><br><span class="line">        Button b1 = <span class="keyword">new</span> Button(<span class="string">"start"</span>);</span><br><span class="line">        Button b2 = <span class="keyword">new</span> Button(<span class="string">"stop"</span>);</span><br><span class="line"><span class="comment">//        b1.setActionCommand("b1-start");</span></span><br><span class="line"></span><br><span class="line">        Myaction myaction = <span class="keyword">new</span> Myaction();</span><br><span class="line">        b1.addActionListener(myaction);</span><br><span class="line">        b2.addActionListener(myaction);</span><br><span class="line"></span><br><span class="line">        frame.add(b1,BorderLayout.EAST);</span><br><span class="line">        frame.add(b2,BorderLayout.WEST);</span><br><span class="line">        frame.pack();</span><br><span class="line">        frame.setVisible(<span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Myaction</span> <span class="keyword">implements</span> <span class="title">ActionListener</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">actionPerformed</span><span class="params">(ActionEvent e)</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line"><span class="comment">//        System.out.println("按钮被点击了"+"msg -&gt;"+e.getActionCommand());</span></span><br><span class="line">        <span class="keyword">if</span>(e.getActionCommand().equals(<span class="string">"start"</span>))&#123;</span><br><span class="line">            System.out.println(<span class="string">"true"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">"false"</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="5、输入框TextField监听"><a href="#5、输入框TextField监听" class="headerlink" title="5、输入框TextField监听"></a>5、输入框TextField监听</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CalcTest</span> </span>&#123;</span><br><span class="line">    <span class="comment">//实现一个简易计算器</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">           <span class="keyword">new</span> calc();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//计算器类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">calc</span> <span class="keyword">extends</span> <span class="title">Frame</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">calc</span><span class="params">()</span>  </span>&#123;</span><br><span class="line">        <span class="comment">//3个文本框+1个按钮+1个标签</span></span><br><span class="line">        TextField textField1 = <span class="keyword">new</span> TextField(<span class="number">10</span>);</span><br><span class="line">        TextField textField2 = <span class="keyword">new</span> TextField(<span class="number">10</span>);</span><br><span class="line">        TextField textField3 = <span class="keyword">new</span> TextField(<span class="number">20</span>);</span><br><span class="line"></span><br><span class="line">        Button button = <span class="keyword">new</span> Button(<span class="string">"="</span>);</span><br><span class="line">        button.addActionListener(<span class="keyword">new</span> MyAction3(textField1,textField2,textField3));</span><br><span class="line">        Label label = <span class="keyword">new</span> Label(<span class="string">"+"</span>);</span><br><span class="line"></span><br><span class="line">        setLayout(<span class="keyword">new</span> FlowLayout());</span><br><span class="line">        add(textField1);</span><br><span class="line">        add(label);</span><br><span class="line">        add(textField2);</span><br><span class="line">        add(button);</span><br><span class="line">        add(textField3);</span><br><span class="line">        pack();</span><br><span class="line">        setVisible(<span class="keyword">true</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//监听器类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyAction3</span> <span class="keyword">implements</span> <span class="title">ActionListener</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//获取三个变量</span></span><br><span class="line">    <span class="keyword">private</span> TextField textField1,textField2,textField3;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyAction3</span><span class="params">(TextField textField1, TextField textField2, TextField textField3)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.textField1=textField1;</span><br><span class="line">        <span class="keyword">this</span>.textField2=textField2;</span><br><span class="line">        <span class="keyword">this</span>.textField3=textField3;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">actionPerformed</span><span class="params">(ActionEvent e)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//1.获得加数和被加数</span></span><br><span class="line">        <span class="keyword">int</span> i = Integer.parseInt(textField1.getText());</span><br><span class="line">        <span class="keyword">int</span> j = Integer.parseInt(textField2.getText());</span><br><span class="line">         <span class="keyword">int</span> k=i+j;</span><br><span class="line">        <span class="comment">//2.将这个值加法运算后放入第三个框</span></span><br><span class="line">        textField3.setText(String.valueOf(k));</span><br><span class="line">        <span class="comment">//3.清除前两个框</span></span><br><span class="line">        textField1.setText(<span class="string">""</span>);</span><br><span class="line">        textField2.setText(<span class="string">""</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>优化代码改造成面向对象：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CalcTest</span> </span>&#123;</span><br><span class="line">    <span class="comment">//实现一个简易计算器</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">           <span class="keyword">new</span> calc().loadFrame();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//面向对象：抽取共性</span></span><br><span class="line"><span class="comment">//计算器类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">calc</span> <span class="keyword">extends</span> <span class="title">Frame</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    TextField num1,num2,num3;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">loadFrame</span><span class="params">()</span></span>&#123;</span><br><span class="line">         num1 = <span class="keyword">new</span> TextField(<span class="number">10</span>);</span><br><span class="line">         num2 = <span class="keyword">new</span> TextField(<span class="number">10</span>);</span><br><span class="line">         num3 = <span class="keyword">new</span> TextField(<span class="number">20</span>);</span><br><span class="line">        <span class="comment">//3个文本框+1个按钮+1个标签</span></span><br><span class="line">        Button button = <span class="keyword">new</span> Button(<span class="string">"="</span>);</span><br><span class="line">        Label label = <span class="keyword">new</span> Label(<span class="string">"+"</span>);</span><br><span class="line">        <span class="comment">//设置监听</span></span><br><span class="line">        button.addActionListener(<span class="keyword">new</span> MyAction3(<span class="keyword">this</span>));</span><br><span class="line">        <span class="comment">//设置布局</span></span><br><span class="line">        setLayout(<span class="keyword">new</span> FlowLayout());</span><br><span class="line">        add(num1);</span><br><span class="line">        add(label);</span><br><span class="line">        add(num2);</span><br><span class="line">        add(button);</span><br><span class="line">        add(num3);</span><br><span class="line">        pack();</span><br><span class="line">        setVisible(<span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//监听器类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyAction3</span> <span class="keyword">implements</span> <span class="title">ActionListener</span></span>&#123;</span><br><span class="line"></span><br><span class="line">   <span class="comment">//获取计算器对象,在一个类中组合另外一个类</span></span><br><span class="line">    calc calc =<span class="keyword">null</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyAction3</span><span class="params">(calc calc)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.calc = calc;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">actionPerformed</span><span class="params">(ActionEvent e)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//1.分别在两个textfield里存放数字 2.相加存入第三个textfield 3.清空文本</span></span><br><span class="line">        <span class="keyword">int</span> n1 =  Integer.parseInt(calc.num1.getText());</span><br><span class="line">        <span class="keyword">int</span> n2 =  Integer.parseInt(calc.num2.getText());</span><br><span class="line">        calc.num3.setText(<span class="string">""</span>+(n1+n2));</span><br><span class="line">        calc.num1.setText(<span class="string">""</span>);</span><br><span class="line">        calc.num2.setText(<span class="string">""</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>使用内部类再次改进：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CalcTest</span> </span>&#123;</span><br><span class="line">    <span class="comment">//实现一个简易计算器</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">           <span class="keyword">new</span> calc().loadFrame();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//面向对象：抽取共性</span></span><br><span class="line"><span class="comment">//计算器类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">calc</span> <span class="keyword">extends</span> <span class="title">Frame</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    TextField num1,num2,num3;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">loadFrame</span><span class="params">()</span></span>&#123;</span><br><span class="line">         num1 = <span class="keyword">new</span> TextField(<span class="number">10</span>);</span><br><span class="line">         num2 = <span class="keyword">new</span> TextField(<span class="number">10</span>);</span><br><span class="line">         num3 = <span class="keyword">new</span> TextField(<span class="number">20</span>);</span><br><span class="line">        <span class="comment">//3个文本框+1个按钮+1个标签</span></span><br><span class="line">        Button button = <span class="keyword">new</span> Button(<span class="string">"="</span>);</span><br><span class="line">        Label label = <span class="keyword">new</span> Label(<span class="string">"+"</span>);</span><br><span class="line">        <span class="comment">//设置监听</span></span><br><span class="line">        button.addActionListener(<span class="keyword">new</span> MyAction3());</span><br><span class="line">        <span class="comment">//设置布局</span></span><br><span class="line">        setLayout(<span class="keyword">new</span> FlowLayout());</span><br><span class="line">        add(num1);</span><br><span class="line">        add(label);</span><br><span class="line">        add(num2);</span><br><span class="line">        add(button);</span><br><span class="line">        add(num3);</span><br><span class="line">        pack();</span><br><span class="line">        setVisible(<span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//监听器类(内部类的好处):可以畅通无阻的访问外部的属性和方法</span></span><br><span class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">MyAction3</span> <span class="keyword">implements</span> <span class="title">ActionListener</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">actionPerformed</span><span class="params">(ActionEvent e)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//1.分别在两个textfield里存放数字 2.相加存入第三个textfield 3.清空文本</span></span><br><span class="line">        <span class="keyword">int</span> n1 =  Integer.parseInt(num1.getText());</span><br><span class="line">        <span class="keyword">int</span> n2 =  Integer.parseInt(num2.getText());</span><br><span class="line">        num3.setText(<span class="string">""</span>+(n1+n2));</span><br><span class="line">        num1.setText(<span class="string">""</span>);</span><br><span class="line">        num2.setText(<span class="string">""</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="6、画笔"><a href="#6、画笔" class="headerlink" title="6、画笔"></a>6、画笔</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestPaint</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> Mypaint().loadFrame();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Mypaint</span> <span class="keyword">extends</span> <span class="title">Frame</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">loadFrame</span><span class="params">()</span></span>&#123;</span><br><span class="line">        setVisible(<span class="keyword">true</span>);</span><br><span class="line">        setBounds(<span class="number">200</span>,<span class="number">200</span>,<span class="number">600</span>,<span class="number">400</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//画笔</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">paint</span><span class="params">(Graphics g)</span> </span>&#123;</span><br><span class="line"><span class="comment">//        super.paint(g);</span></span><br><span class="line">        g.setColor(Color.red);</span><br><span class="line">        g.drawOval(<span class="number">100</span>,<span class="number">100</span>,<span class="number">100</span>,<span class="number">100</span>);</span><br><span class="line">        g.fillOval(<span class="number">100</span>,<span class="number">100</span>,<span class="number">100</span>,<span class="number">100</span>); <span class="comment">//实心圆</span></span><br><span class="line"></span><br><span class="line">        g.setColor(Color.GREEN);</span><br><span class="line">        g.fillRect(<span class="number">150</span>,<span class="number">200</span>,<span class="number">200</span>,<span class="number">200</span>);</span><br><span class="line">        <span class="comment">//养成习惯 用完画笔将它还原最初颜色</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="7、鼠标监听"><a href="#7、鼠标监听" class="headerlink" title="7、鼠标监听"></a>7、鼠标监听</h4><p>目的：想要实现鼠标画画！</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//鼠标监听事件</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestMousListener</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">         <span class="keyword">new</span> MyFrame(<span class="string">"Draw"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyFrame</span> <span class="keyword">extends</span> <span class="title">Frame</span></span>&#123;</span><br><span class="line">    <span class="comment">//画画需要画笔 同时获取鼠标当前位置 需要集合来存储鼠标当前的点</span></span><br><span class="line">    ArrayList points;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyFrame</span><span class="params">(String title)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(title);</span><br><span class="line">        setVisible(<span class="keyword">true</span>);</span><br><span class="line">        setBounds(<span class="number">200</span>,<span class="number">200</span>,<span class="number">400</span>,<span class="number">300</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//存鼠标点击的点</span></span><br><span class="line">        points = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="comment">//针对这个窗口的鼠标监听器</span></span><br><span class="line">        <span class="keyword">this</span>.addMouseListener(<span class="keyword">new</span> MouseListener());</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">paint</span><span class="params">(Graphics g)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//监听鼠标事件</span></span><br><span class="line">        Iterator iterator = points.iterator();</span><br><span class="line">        <span class="keyword">while</span> (iterator.hasNext())&#123;</span><br><span class="line">            Point point =(Point) iterator.next();</span><br><span class="line">            g.setColor(Color.BLUE);</span><br><span class="line">            g.fillOval(point.x,point.y,<span class="number">20</span>,<span class="number">20</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//添加点到界面上</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addPaint</span><span class="params">(Point point)</span></span>&#123;</span><br><span class="line">        points.add(point);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">//适配器模式</span></span><br><span class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">MouseListener</span> <span class="keyword">extends</span> <span class="title">MouseAdapter</span> </span>&#123;</span><br><span class="line">        <span class="comment">//鼠标按下，弹起，按住不放</span></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">mousePressed</span><span class="params">(MouseEvent e)</span> </span>&#123;</span><br><span class="line">            MyFrame myFrame = (MyFrame) e.getSource();</span><br><span class="line">            <span class="comment">//点击就在界面上产生一个点 这点就是鼠标的点</span></span><br><span class="line">            myFrame.addPaint(<span class="keyword">new</span> Point(e.getX(),e.getY()));</span><br><span class="line"></span><br><span class="line">            <span class="comment">//每次点击鼠标都需要重画</span></span><br><span class="line">            myFrame.repaint(); <span class="comment">//刷新 </span></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="8、窗口监听"><a href="#8、窗口监听" class="headerlink" title="8、窗口监听"></a>8、窗口监听</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestWindowLisnter</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> WindowFrame();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">WindowFrame</span> <span class="keyword">extends</span> <span class="title">Frame</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">WindowFrame</span><span class="params">()</span></span>&#123;</span><br><span class="line">        setBackground(Color.blue);</span><br><span class="line">        setBounds(<span class="number">100</span>,<span class="number">100</span>,<span class="number">200</span>,<span class="number">200</span>);</span><br><span class="line">        setVisible(<span class="keyword">true</span>);</span><br><span class="line"><span class="comment">//        addWindowListener(new Mywindowlistener());</span></span><br><span class="line">        addWindowListener(<span class="keyword">new</span> WindowAdapter() &#123;</span><br><span class="line"></span><br><span class="line"><span class="comment">//        最常见的的两个方法</span></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">windowClosing</span><span class="params">(WindowEvent e)</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">"windowclosing"</span>);</span><br><span class="line">                System.exit(<span class="number">0</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">windowActivated</span><span class="params">(WindowEvent e)</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">"windowActivated"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="9、键盘监听"><a href="#9、键盘监听" class="headerlink" title="9、键盘监听"></a>9、键盘监听</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">keyFrame</span> <span class="keyword">extends</span> <span class="title">Frame</span></span>&#123;                         </span><br><span class="line">                                                      </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">keyFrame</span><span class="params">()</span>  </span>&#123;                              </span><br><span class="line">        setBounds(<span class="number">1</span>,<span class="number">2</span>,<span class="number">300</span>,<span class="number">400</span>);                       </span><br><span class="line">        setVisible(<span class="keyword">true</span>);                             </span><br><span class="line">        <span class="keyword">this</span>.addKeyListener(<span class="keyword">new</span> KeyAdapter() &#123;      </span><br><span class="line">            </span><br><span class="line">            <span class="comment">//键盘按下的监听                                 </span></span><br><span class="line">            <span class="meta">@Override</span>                                 </span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">keyPressed</span><span class="params">(KeyEvent e)</span> </span>&#123;      </span><br><span class="line">                <span class="comment">//获得键盘按下的键是哪一个  获取当前键盘的码              </span></span><br><span class="line">                <span class="keyword">int</span> keyCode = e.getKeyCode();         </span><br><span class="line">                System.out.println(keyCode);          </span><br><span class="line">                <span class="keyword">if</span> (keyCode == KeyEvent.VK_UP)&#123;       </span><br><span class="line">                    System.out.println(<span class="string">"你按下了↑键"</span>);     </span><br><span class="line">                &#125;                                     </span><br><span class="line">            &#125;                                         </span><br><span class="line">        &#125;);                                           </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-Swing-封装"><a href="#2-Swing-封装" class="headerlink" title="2.Swing(封装)"></a>2.Swing(封装)</h2><h3 id="2-1-Swing介绍"><a href="#2-1-Swing介绍" class="headerlink" title="2.1 Swing介绍"></a>2.1 Swing介绍</h3><h4 id="1、JFrame"><a href="#1、JFrame" class="headerlink" title="1、JFrame"></a>1、JFrame</h4><p>初始化JFrame、设置背景色、设置标签居中</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> javax.swing.*;</span><br><span class="line"><span class="keyword">import</span> java.awt.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JframeTest</span> </span>&#123;</span><br><span class="line">    <span class="comment">//init(); 初始化</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">        JFrame jFrame = <span class="keyword">new</span> JFrame(<span class="string">"JFrame窗口"</span>);</span><br><span class="line">        jFrame.setVisible(<span class="keyword">true</span>);</span><br><span class="line">        jFrame.setBounds(<span class="number">100</span>,<span class="number">100</span>,<span class="number">200</span>,<span class="number">200</span>);</span><br><span class="line"><span class="comment">//        jFrame.setBackground(Color.CYAN); 直接设置颜色是不行的</span></span><br><span class="line">        <span class="comment">//设置文字</span></span><br><span class="line">        JLabel l1 = <span class="keyword">new</span> JLabel(<span class="string">"牛B"</span>);</span><br><span class="line">        <span class="comment">//居中</span></span><br><span class="line">        l1.setHorizontalAlignment(SwingConstants.CENTER);</span><br><span class="line">        jFrame.add(l1);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//获得一个容器</span></span><br><span class="line">        jFrame.getContentPane().setBackground(Color.CYAN);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//关闭事件</span></span><br><span class="line">        jFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"><span class="comment">//        建立一个窗口</span></span><br><span class="line">        <span class="keyword">new</span> JframeTest().init();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、JDialog-弹窗"><a href="#2、JDialog-弹窗" class="headerlink" title="2、JDialog(弹窗)"></a>2、JDialog(弹窗)</h4><p>JDialog默认就写了关闭事件 不用重复写</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//主窗口</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DialogTest</span> <span class="keyword">extends</span> <span class="title">JFrame</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">DialogTest</span><span class="params">()</span>  </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.setVisible(<span class="keyword">true</span>);</span><br><span class="line">        <span class="keyword">this</span>.setBounds(<span class="number">200</span>,<span class="number">200</span>,<span class="number">700</span>,<span class="number">500</span>);</span><br><span class="line">        <span class="keyword">this</span>.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//实例化容器</span></span><br><span class="line">        Container container = <span class="keyword">this</span>.getContentPane();</span><br><span class="line">        <span class="comment">//绝对布局</span></span><br><span class="line">        container.setLayout(<span class="keyword">null</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//按钮</span></span><br><span class="line">        JButton jButton = <span class="keyword">new</span> JButton(<span class="string">"点击弹出对话框"</span>);</span><br><span class="line">        jButton.setBounds(<span class="number">30</span>,<span class="number">30</span>,<span class="number">200</span>,<span class="number">50</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//点击按钮的时候 弹出弹窗 监听事件</span></span><br><span class="line">        jButton.addActionListener(<span class="keyword">new</span> ActionListener() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">actionPerformed</span><span class="params">(ActionEvent e)</span> </span>&#123;</span><br><span class="line">                <span class="comment">//弹窗</span></span><br><span class="line">                <span class="keyword">new</span> MyDialog();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        container.add(jButton);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> DialogTest();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//弹窗的窗口</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyDialog</span> <span class="keyword">extends</span> <span class="title">JDialog</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyDialog</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.setVisible(<span class="keyword">true</span>);</span><br><span class="line">        <span class="keyword">this</span>.setBounds(<span class="number">100</span>,<span class="number">100</span>,<span class="number">500</span>,<span class="number">500</span>);</span><br><span class="line">     <span class="comment">// 默认就有了 代码多余  this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);</span></span><br><span class="line"></span><br><span class="line">        Container container = <span class="keyword">this</span>.getContentPane();</span><br><span class="line">        container.setLayout(<span class="keyword">null</span>);</span><br><span class="line">        JLabel jLabel = <span class="keyword">new</span> JLabel(<span class="string">"SB"</span>);</span><br><span class="line">        jLabel.setBounds(<span class="number">300</span>,<span class="number">400</span>,<span class="number">70</span>,<span class="number">70</span>);</span><br><span class="line">        container.add(jLabel);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3、标签"><a href="#3、标签" class="headerlink" title="3、标签"></a>3、标签</h4><h5 id="label"><a href="#label" class="headerlink" title="label"></a>label</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> JLable(<span class="string">"XXX"</span>);</span><br><span class="line"></span><br><span class="line">用图片作为label</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="4、面板"><a href="#4、面板" class="headerlink" title="4、面板"></a>4、面板</h4><h4 id="5、按钮"><a href="#5、按钮" class="headerlink" title="5、按钮"></a>5、按钮</h4><ul>
+<li>单选按钮</li>
+<li>复选按钮</li>
+</ul>
+<h4 id="6、列表"><a href="#6、列表" class="headerlink" title="6、列表"></a>6、列表</h4><h4 id="7、文本框"><a href="#7、文本框" class="headerlink" title="7、文本框"></a>7、文本框</h4>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://border-kage.github.io/2020/09/09/GUI%E7%BC%96%E7%A8%8B/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/09/File%E7%B1%BB%E4%B8%8EIO%E6%B5%81/" class="archive-article-date">
-  	<time datetime="2020-09-09T07:09:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-09</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/09/09/File%E7%B1%BB%E4%B8%8EIO%E6%B5%81/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">File类与IO流</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/09/File%E7%B1%BB%E4%B8%8EIO%E6%B5%81/">File类与IO流</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/08/27/%E5%BC%82%E5%B8%B8%E7%9A%84%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" class="archive-article-date">
-  	<time datetime="2020-08-27T04:54:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/27/%E5%BC%82%E5%B8%B8%E7%9A%84%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/">异常的学习总结</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/08/12/%E5%B0%8F%E7%B1%B3%E5%8D%81%E5%91%A8%E5%B9%B4%E6%9C%89%E6%84%9F/" class="archive-article-date">
-  	<time datetime="2020-08-12T13:48:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/12/%E5%B0%8F%E7%B1%B3%E5%8D%81%E5%91%A8%E5%B9%B4%E6%9C%89%E6%84%9F/">小米十周年发布会</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/10/Collection%E9%9B%86%E5%90%88/" class="archive-article-date">
-  	<time datetime="2020-07-10T11:19:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/10/Collection%E9%9B%86%E5%90%88/">Collection</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/09/Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-07-09T09:48:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/09/Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/">Lambda表达式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/07/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%8E%E6%8E%A5%E5%8F%A3%E7%9A%84%E6%A6%82%E5%BF%B5/" class="archive-article-date">
-  	<time datetime="2020-07-07T07:29:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/07/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%8E%E6%8E%A5%E5%8F%A3%E7%9A%84%E6%A6%82%E5%BF%B5/">抽象类与接口的概念</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/06/%E9%9B%86%E5%90%88%E7%9A%84%E4%B8%80%E4%B8%AA%E5%B0%8F%E7%BB%83%E4%B9%A0/" class="archive-article-date">
-  	<time datetime="2020-07-06T09:46:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/06/%E9%9B%86%E5%90%88%E7%9A%84%E4%B8%80%E4%B8%AA%E5%B0%8F%E7%BB%83%E4%B9%A0/">集合的一个小练习</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/05/%E5%85%B3%E4%BA%8E%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81/" class="archive-article-date">
-  	<time datetime="2020-07-05T02:44:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/05/%E5%85%B3%E4%BA%8E%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81/">继承与多态</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/04/%E6%B5%85%E8%B0%88%E4%B8%BA%E4%BD%95%E8%A6%81%E4%BD%BF%E7%94%A8%E6%97%A0%E5%8F%82%E6%9E%84%E9%80%A0%E5%99%A8/" class="archive-article-date">
-  	<time datetime="2020-07-04T07:16:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/04/%E6%B5%85%E8%B0%88%E4%B8%BA%E4%BD%95%E8%A6%81%E4%BD%BF%E7%94%A8%E6%97%A0%E5%8F%82%E6%9E%84%E9%80%A0%E5%99%A8/">浅谈为何要使用无参构造器</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &amp;raquo;</a>
-    </nav>
   
 
 
@@ -456,8 +410,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

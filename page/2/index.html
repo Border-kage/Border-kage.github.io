@@ -146,6 +146,144 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-关于继承与多态" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/05/%E5%85%B3%E4%BA%8E%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81/">继承与多态</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/05/%E5%85%B3%E4%BA%8E%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81/" class="archive-article-date">
+  	<time datetime="2020-07-05T02:44:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="关于继承"><a href="#关于继承" class="headerlink" title="关于继承"></a>关于继承</h2><p>关于Employee类，假设你在一家公司上班，公司里面不只有员工还有经理、老板等存在，他们和员工有很多相似的地方，比如都要领取薪水，但是普通员工仅仅领取薪水，经理除了领取薪水外还有绩效的加成。这种情况下就需要使用到继承，因此经理的Manager类可以利用Employee类的基础部分并保留基础字段，但是还需要为它定制一些特别的方法。继承一个类使用关键字extends。注：一个子类可以继承多个父类(extends A,B,C)同时也可以树状继承(A继承B，B继承C)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Manager</span> <span class="keyword">extends</span> <span class="title">Employee</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> bouns;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Manager</span><span class="params">(String name,<span class="keyword">double</span> salary)</span> </span>&#123;   <span class="comment">//调用Employee带有name、salary参数的构造器</span></span><br><span class="line">            <span class="keyword">super</span>(name, salary);</span><br><span class="line">            bouns=<span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setbouns</span><span class="params">(<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">        bouns = b;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getSalary</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">double</span> basesalary=<span class="keyword">super</span>.getSalary();</span><br><span class="line">        <span class="keyword">return</span> basesalary+bouns;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="关于多态"><a href="#关于多态" class="headerlink" title="关于多态"></a>关于多态</h2><p>在Java程序设计语言中，对象变量是多态的。一个Employee类型的变量既可以引用Employee对象，也可以引用它的任何一个子类对象，如Manager注:可以将子类的引用赋值给父类，(所有经理都是员工)，不能将父类的引用赋值给子类(并不是所有员工都是经理)<br>程序列表如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EmployeeTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> boss = <span class="keyword">new</span> Manager(<span class="string">"duke"</span>,<span class="number">80000</span>);</span><br><span class="line">        boss.setbouns(<span class="number">5000</span>);</span><br><span class="line"></span><br><span class="line">        Employee staff[] = <span class="keyword">new</span> Employee[<span class="number">3</span>];</span><br><span class="line"></span><br><span class="line">        staff[<span class="number">0</span>]=boss;  <span class="comment">//staff[0]与boss引用同一个对象，但编译器仅将staff[0]看做一个员工对象</span></span><br><span class="line">       </span><br><span class="line">        staff[<span class="number">1</span>]=<span class="keyword">new</span> Employee(<span class="string">"one"</span>,<span class="number">20000</span>);</span><br><span class="line">        staff[<span class="number">2</span>]=<span class="keyword">new</span> Employee(<span class="string">"two"</span>,<span class="number">25000</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//这意味着，可以这样调用</span></span><br><span class="line">        boss.setBouns(<span class="number">5000</span>);  <span class="comment">//OK</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//但是不能这样调用</span></span><br><span class="line">        staff[<span class="number">0</span>].setBouns(<span class="number">5000</span>)； <span class="comment">//ERROR</span></span><br><span class="line">        <span class="comment">//因为staff[0]是Employee类型的对象，而setBouns是Manager类的方法</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="向上转型与向下转型"><a href="#向上转型与向下转型" class="headerlink" title="向上转型与向下转型"></a>向上转型与向下转型</h2><p>向上转型其实就是多态的写法,它表示每一个子类都可以被当成父类。如图所示：<br><img src="/2020/07/05/%E5%85%B3%E4%BA%8E%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81/R1.png" alt></p>
+<p>向下转型(使用instanceof关键字判断)，当一个对象已经进行向上转型被当成父类对象使用时，它无法继续调用子类的方法，因此想要调用子类方法就必须手动向下转型，令父类对象再次被当成子类使用，比如cat类有一个特定方法叫catchMouse，而dog类有一个特定方法名为watchhouse，想要使用子类特定方法应该如下所示：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args	)</span></span>&#123;</span><br><span class="line">Animal a = <span class="keyword">new</span> Cat();</span><br><span class="line">a.eat();  <span class="comment">//执行子类方法 猫吃鱼</span></span><br><span class="line"></span><br><span class="line">a.catchmouse();  <span class="comment">//ERROR</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//向下转型才可使用子类特有方法</span></span><br><span class="line"><span class="keyword">if</span>(a <span class="keyword">instanceof</span> Cat)&#123;</span><br><span class="line">     Cat c = (Cat）a；</span><br><span class="line">     c.catchmouse();</span><br><span class="line">     &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/05/%E5%85%B3%E4%BA%8E%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-浅谈为何要使用无参构造器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/04/%E6%B5%85%E8%B0%88%E4%B8%BA%E4%BD%95%E8%A6%81%E4%BD%BF%E7%94%A8%E6%97%A0%E5%8F%82%E6%9E%84%E9%80%A0%E5%99%A8/">浅谈为何要使用无参构造器</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/04/%E6%B5%85%E8%B0%88%E4%B8%BA%E4%BD%95%E8%A6%81%E4%BD%BF%E7%94%A8%E6%97%A0%E5%8F%82%E6%9E%84%E9%80%A0%E5%99%A8/" class="archive-article-date">
+  	<time datetime="2020-07-04T07:16:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>为何要使用无参构造器? 无参构造器到底有什么用?</p>
+<hr>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">public class Employee &#123;</span><br><span class="line"></span><br><span class="line">private static int nextId =1;</span><br><span class="line">private String name;</span><br><span class="line">private double salary;</span><br><span class="line">private int id;</span><br><span class="line"></span><br><span class="line">public <span class="function"><span class="title">Employee</span></span>() &#123;  //无参构造器</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public Employee(String name, double salary) &#123;   //有参构造器</span><br><span class="line">        this.name = name;</span><br><span class="line">        this.salary = salary;</span><br><span class="line">        id=0;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>我们知道，如果在构造器中没有为一些字段设置初始值，那么JAVA会默认给他们一个初始值例如：int类型初始<br>值为0，boolean类型初始值为false，对象引用类型初始值为null。这并不是一个好的编程习惯，因为在某些情况<br>下null值的引用会造成空指针异常，因此JAVA提供了一个无参构造器，这个构造器将所有的字段实例设置为默认值。<br>这便是第一个作用，第二个作用是初始化java类，java没有构造方法是无法new出对象的，因此无参构造提供类的实<br>例化以便调用，ps(自己不写无参构造方法，java会默认提供一个，自己写了则可以理解为覆盖掉了默认提供的构造器)</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/04/%E6%B5%85%E8%B0%88%E4%B8%BA%E4%BD%95%E8%A6%81%E4%BD%BF%E7%94%A8%E6%97%A0%E5%8F%82%E6%9E%84%E9%80%A0%E5%99%A8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-讨论java对对象采用的是按引用调用还是按值调用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -437,7 +575,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2020 Border
+    		&copy; 2021 Border
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
